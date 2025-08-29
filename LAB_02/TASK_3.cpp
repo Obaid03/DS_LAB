@@ -15,24 +15,27 @@ int main(){
     cin>> students;
     nofstudents=new int[students];
     for(int i=0;i<students;i++){
-            cout<<"Enter No of courses students   "<<i<<"have"<<endl;
+            cout<<"Enter No of courses students   "<<i+1<<" have"<<endl;
             cin>>nofstudents[i];
     }
     jagged =new int*[students];
     for (int i=0;i<students;i++){
         jagged[i]=new int [nofstudents[i]];
         for(int j=0;j<nofstudents[i];j++){
-            cout<<"Enter Marks for Student  "<<j<<"  Course "<<i<<endl;
+            cout<<"Enter Marks for Student  "<<j+1<<"  Course "<<i+1<<endl;
             cin>>jagged[i][j];
         }
     }
     int sum;
+    double average;
     for(int i=0;i<students;i++){
         sum=0;
         for(int j=0;j<nofstudents[i];j++){
-            sum+=nofstudents[i][j];
+            sum+=jagged[i][j];
         }
-        cout<<"Average for student  "<<i<<" is  "<<sum<<endl;
+        average=(double)sum/nofstudents[i];
+        
+        cout<<"Average for student  "<<i+1<<" is  "<<average<<endl;
     }
     
 }
