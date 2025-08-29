@@ -12,13 +12,15 @@ int main(){
     cout<<"Enter Size of Array"<<endl;
     cin>>size;
     arr=new int[size];
-    arr[0]=0;
+    for(i=0;i<size;i++){
+        arr[i]=0;
+    }
     for(i=0;i<size;i++){
         cout<<"Enter Element "<<i+1<<endl;
         cin>>arr[i];
     }
     for(i=0;i<size;i++){
-        cout<<"Element -->  "<<i<<endl;
+        cout<<"Element -->  "<<arr[i]<<endl;
     }
     delete [] arr;
 }
