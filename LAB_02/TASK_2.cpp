@@ -13,10 +13,14 @@ int main(){
     cout<<"Enter Column Size"<<endl;
     cin>>column;
     chart=new int*[row];
-    for(i=0;i<column;i++){
+    for(i=0;i<row;i++){
         chart[i]=new int[column];
     }
-    chart[0][0]=0;
+    for(i=0;i<row;i++){
+        for(int j=0;j<column;j++){
+            chart[i][j]=0;
+        }
+    }
     cout<<"Enter '0' for not occupied and '1' for Occupied "<<endl;
     for(i=0;i<row;i++){
         for(int j=0;j<column;j++){
@@ -43,5 +47,4 @@ int main(){
             delete [] chart[i];   
         }
     delete [] chart;
-
     }
