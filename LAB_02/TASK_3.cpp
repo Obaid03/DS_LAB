@@ -8,22 +8,22 @@ Design a program to handle marks of students in different courses using a jagged
 #include<iostream>
 using namespace std;
 int main(){
-    int *nofcourses;
-    int courses;
+    int *nofstudents;
+    int students;
     int  **jagged;
-    cout<<"Enter Total Number Of Courses:   ";
-    cin>> courses;
-    nofcourses=new int[courses];
-    for(int i=0;i<courses;i++){
-            cout<<"Enter No of Students in Course  "<<i<<endl;
-            cin>>nofcourses[i];
+    cout<<"Enter Total Number Of students:   ";
+    cin>> students;
+    nofstudents=new int[students];
+    for(int i=0;i<students;i++){
+            cout<<"Enter No of courses students   "<<i<<"have"<<endl;
+            cin>>nofstudents[i];
     }
-    jagged =new int*[courses];
-    for (int i=0;i<courses;i++){
-        jagged[i]=new int [nofcourses[i]];
-        for(int j=0;j<nofcourses[i];j++){
+    jagged =new int*[students];
+    for (int i=0;i<students;i++){
+        jagged[i]=new int [nofstudents[i]];
+        for(int j=0;j<nofstudents[i];j++){
         cout<<"Enter Marks for course  "<<i<<"  Student "<<j<<endl;
         }
     }
-
+    
 }
