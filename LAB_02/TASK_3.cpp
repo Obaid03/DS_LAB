@@ -37,5 +37,10 @@ int main(){
         
         cout<<"Average for student  "<<i+1<<" is  "<<average<<endl;
     }
+    for (int i=0;i<students;i++){
+        delete [] jagged[i];
+    }
+    delete [] jagged;
+    delete [] nofstudents;
     
 }
