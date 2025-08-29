@@ -1,4 +1,4 @@
-/*sk #3:
+/*Task #3:
 Design a program to handle marks of students in different courses using a jagged array
 (since each student is enrolled in a different number of courses).
 => Input the number of courses each student takes.
@@ -22,7 +22,7 @@ int main(){
     for (int i=0;i<students;i++){
         jagged[i]=new int [nofstudents[i]];
         for(int j=0;j<nofstudents[i];j++){
-            cout<<"Enter Marks for Student  "<<j+1<<"  Course "<<i+1<<endl;
+            cout<<"Enter Marks for Student  "<<i+1<<"  Course "<<j+1<<endl;
             cin>>jagged[i][j];
         }
     }
