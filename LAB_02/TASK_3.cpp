@@ -22,8 +22,17 @@ int main(){
     for (int i=0;i<students;i++){
         jagged[i]=new int [nofstudents[i]];
         for(int j=0;j<nofstudents[i];j++){
-        cout<<"Enter Marks for course  "<<i<<"  Student "<<j<<endl;
+            cout<<"Enter Marks for Student  "<<j<<"  Course "<<i<<endl;
+            cin>>jagged[i][j];
         }
+    }
+    int sum;
+    for(int i=0;i<students;i++){
+        sum=0;
+        for(int j=0;j<nofstudents[i];j++){
+            sum+=nofstudents[i][j];
+        }
+        cout<<"Average for student  "<<i<<" is  "<<sum<<endl;
     }
     
 }
