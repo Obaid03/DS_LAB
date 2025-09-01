@@ -29,11 +29,14 @@ class Marks{
             }
             return *marks;
         }
-        ~Marks(){
+        void release(){
             if(!(marks==nullptr)){
                 delete marks;
                 marks =nullptr;
             }
+        }
+        ~Marks(){
+           release(); 
         }
 };
 int main(){
