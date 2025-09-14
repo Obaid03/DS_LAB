@@ -77,7 +77,7 @@ public:
     }
 };
 int main() {
-    int N = 7, k = 3;
+    int k = 3;
     CLL circle;
     circle.insert(1);
     circle.insert(2);
